@@ -1,10 +1,12 @@
 import { useContext } from "react";
-import { detailsContext } from "../../Contexts/detailsContext";
+import { moreContext } from "../../Contexts/moreContext";
 import Percentage from "./Humidity/Percentage";
 import ProgressBar from "./Humidity/ProgressBar";
 
 const Humidity = () => {
-  const { humidity } = useContext(detailsContext);
+  const {
+    details: { humidity },
+  } = useContext(moreContext);
   return (
     <div className="py-4 flex justify-center">
       <div className="relative">

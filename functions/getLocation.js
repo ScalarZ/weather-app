@@ -2,11 +2,11 @@ import useFetch from "../useFetch";
 import fetchTimeZone from "./fetchTimeZone";
 import getInformation from "./getInformation";
 
-const getLocation = (setData, setLoading) => {
+const getLocation = (setData, setLoading, setIsGpsOn) => {
   const { geolocation } = navigator;
 
   if (!geolocation) {
-    return alert("Geolocation is not supported by your browser");
+    setIsGpsOn(false);
   }
 
   const success = async (position) => {
@@ -19,9 +19,10 @@ const getLocation = (setData, setLoading) => {
     const information = getInformation(data);
     setData(information);
     setLoading(true);
+    setIsGpsOn(true);
   };
   const error = () => {
-    return alert("Unable to retrieve your location");
+    setIsGpsOn(false);
   };
 
   return geolocation.getCurrentPosition(success, error);

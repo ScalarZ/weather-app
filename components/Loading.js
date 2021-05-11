@@ -1,6 +1,9 @@
 import Image from "next/image";
 
-const Loading = ({ status }) => {
+const Loading = ({ status, isGpsOn }) => {
+  if (!isGpsOn) {
+    return null;
+  }
   if (status === 0) {
     return (
       <div className="text-secondary text-center transform translate-y-32">

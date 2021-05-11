@@ -4,7 +4,7 @@ const Date = ({ fullDate: { day, date, month } }) => {
   }
   return (
     <div>
-      <span className="text-2xl">{`${day}, ${date} ${month}`}</span>
+      <span className="text-2xl font-medium">{`${day}, ${date} ${month}`}</span>
     </div>
   );
 };

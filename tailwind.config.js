@@ -9,7 +9,8 @@ module.exports = {
     },
     textColor: {
       primary: "#212121",
-      secondary: "#929497",
+      secondary: "#FFF",
+      warning: "#FF3333",
     },
     boxShadow: {
       a1: "0 6px 10px rgba(0, 0, 0, 0.2)",
