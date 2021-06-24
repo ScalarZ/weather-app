@@ -31,7 +31,7 @@ const Search = ({ isGpsOn }) => {
         <Button value={value} />
       </form>
       {!isGpsOn && (
-        <div>
+        <div className="font-oxanium text-primary">
           <p className="pt-4 text-center text-warning">
             It looks like you did not turn on your <b>GPS</b>, or Geolocation is
             not supported by your browser
