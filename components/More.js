@@ -6,7 +6,7 @@ import Details from "./More/Details";
 
 const More = () => {
   return (
-    <div className="relative">
+    <div className="px-3 relative">
       <ForecastDay />
       <ForecastWeek />
       <Sun_rise_set />

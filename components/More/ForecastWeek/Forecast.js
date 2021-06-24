@@ -11,7 +11,7 @@ const Forecast = ({ information }) => {
       <span>{date_ + " " + month}</span>
       <span>{day}</span>
       <Image loader={myLoader} src={icon} height="44" width="44" />
-      <span>{temp.maxtemp_c + "/" + temp.mintemp_c}</span>
+      <span>{temp.maxtemp_c + "/" + temp.mintemp_c + "°C"}</span>
     </li>
   );
 };
