@@ -8,15 +8,23 @@ module.exports = {
       cairo: ["Cairo", "sans-serif"],
     },
     textColor: {
-      primary: "#212121",
-      secondary: "#FFF",
+      primary: "#6C7CB4",
+      secondary: "#D6DFFF",
       warning: "#FF3333",
+      transparent: "transparent",
     },
     boxShadow: {
-      a1: "0 6px 10px rgba(0, 0, 0, 0.2)",
+      "out-a1": "2px 2px 4px #BBCAFF, -2px -2px 4px rgba(255, 255, 255, 0.6)",
+      "out-b1": "10px 10px 20px #bbcaff99, -10px -10px 20px #ffffff66",
+      "out-c1": "4px 4px 8px #BBCAFF",
+      "out-d1": "4px 4px 8px #BBCAFF, -4px -4px 8px rgba(255, 255, 255, 0.6)",
+      "in-c1":
+        "inset 1px 1px 2px #BBCAFF,inset -1px -1px 2px rgba(255, 255, 255, 0.6)",
+      "in-out-a1":
+        "2px 2px 4px #BBCAFF, -2px -2px 4px rgba(255, 255, 255, 0.6), inset 2px 2px 4px #BBCAFF,inset -2px -2px 4px rgba(255, 255, 255, 0.6)",
     },
     backgroundColor: (theme) => ({
-      a1: "#F9F9F9",
+      a1: "#D6DFFF",
       a2: "#0F1C49",
       a3: "#0F1C49",
       input1: "#F2F2F2",
@@ -33,10 +41,6 @@ module.exports = {
       y3: "calc(50% - 15px)",
     },
     extend: {
-      transitionProperty: {
-        width: "width",
-        height: "height",
-      },
       animation: {
         turn: "turn 10s linear infinite",
         colorChange1: "colorChange1 10s linear infinite",
@@ -46,6 +50,7 @@ module.exports = {
         pressure: "pressure 5s ease infinite",
         stroke1: "stroke1 0.7s ease-out infinite",
         stroke2: "stroke2 1s linear infinite",
+        search: "search 3s linear forwards",
       },
       keyframes: {
         turn: {
@@ -78,6 +83,32 @@ module.exports = {
         },
         stroke2: {
           "100%": { strokeDashoffset: 0 },
+        },
+        search: {
+          "0%": {
+            width: "40px",
+            boxShadow:
+              "2px 2px 4px #bbcaff, -2px -2px 4px rgb(255 255 255 / 60%)",
+          },
+          "30%": {
+            width: "40px",
+            boxShadow:
+              "2px 2px 4px #bbcaff, -2px -2px 4px rgb(255 255 255 / 60%)",
+          },
+          "60%": {
+            width: "40px",
+            boxShadow:
+              "2px 2px 4px #BBCAFF, -2px -2px 4px rgba(255, 255, 255, 0.6), inset 2px 2px 4px #BBCAFF,inset -2px -2px 4px rgba(255, 255, 255, 0.6)",
+          },
+          "70%": {
+            width: "40px",
+          },
+          "100%": {
+            padding: "0 40px 0 20px",
+            width: "240px",
+            boxShadow:
+              "2px 2px 4px #BBCAFF, -2px -2px 4px rgba(255, 255, 255, 0.6), inset 2px 2px 4px #BBCAFF,inset -2px -2px 4px rgba(255, 255, 255, 0.6)",
+          },
         },
       },
     },

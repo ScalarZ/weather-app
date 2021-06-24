@@ -1,7 +1,7 @@
 const Percentage = ({ percentage }) => {
   return (
     <div>
-      <span>{`${percentage} %`}</span>
+      <span className="text-primary font-extrabold">{`${percentage} %`}</span>
     </div>
   );
 };

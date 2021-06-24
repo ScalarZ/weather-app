@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const myLoader = ({ src, width, quality }) => {
+const myLoader = ({ src }) => {
   return `${src}`;
 };
 const SVG = ({ condition }) => {

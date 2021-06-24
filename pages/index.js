@@ -32,6 +32,7 @@ const App = () => {
     setMore(false);
     setLoading(false);
     setIsGpsOn(true);
+    
     getData(country)
       .then(({ data }) => {
         if (data) {
@@ -52,32 +53,34 @@ const App = () => {
   }, []);
 
   return (
-    <div className="relative pt-8 min-h-screen bg-a1">
-      <Head>
-        <title>Weather</title>
-        <link rel="icon" href="/sun.svg" />
-      </Head>
-      <searchContext.Provider value={fetchData}>
-        <Search isGpsOn={isGpsOn} />
-      </searchContext.Provider>
-      {!loading ? (
-        <Loading status={loading} isGpsOn={isGpsOn} />
-      ) : (
-        <div className="mt-8 p-8 flex flex-col items-center">
-          <div className="py-8 font-oxanium text-primary text-center">
-            <div className="flex justify-center items-center">
-              <SVG condition={dataHolder.condition} />
-              <Temperature temp={dataHolder.temp} />
+    <div className="bg-a1">
+      <div className="relative m-auto pt-8 min-h-screen max-w-lg bg-a1">
+        <Head>
+          <title>Weather</title>
+          <link rel="icon" href="/sun.svg" />
+        </Head>
+        <searchContext.Provider value={fetchData}>
+          <Search isGpsOn={isGpsOn} />
+        </searchContext.Provider>
+        {!loading ? (
+          <Loading status={loading} isGpsOn={isGpsOn} />
+        ) : (
+          <div className="mt-8 p-8 flex flex-col items-center">
+            <div className="py-8 font-oxanium text-primary text-center">
+              <div className="flex justify-center items-center">
+                <SVG condition={dataHolder.condition} />
+                <Temperature temp={dataHolder.temp} />
+              </div>
+              <Country country={dataHolder.country} />
+              <Date fullDate={dataHolder.date} />
             </div>
-            <Country country={dataHolder.country} />
-            <Date fullDate={dataHolder.date} />
+            <MoreButton handleMore={handleMore} more={more} />
           </div>
-          <MoreButton handleMore={handleMore} more={more} />
-        </div>
-      )}
-      <moreContext.Provider value={dataHolder.more}>
-        {more && <More more={more} />}
-      </moreContext.Provider>
+        )}
+        <moreContext.Provider value={dataHolder.more}>
+          {more && <More more={more} />}
+        </moreContext.Provider>
+      </div>
     </div>
   );
 };

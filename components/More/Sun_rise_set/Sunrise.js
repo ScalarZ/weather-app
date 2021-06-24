@@ -1,8 +1,25 @@
 const Sunrise = ({ sunrise }) => {
   return (
-    <div className="p-2 w-32 font-oxanium font-medium text-center bg-a1 z-10">
-      <h3 className="text-3xl font-semibold">Sunrise</h3>
-      <span className="text-xl">{sunrise}</span>
+    <div className="p-2 w-32 font-oxanium font-medium text-center z-20">
+      <h3
+        style={{
+          fontSize: "26px",
+          textShadow: "1px 1px 2px #FFFFFFB2",
+          backgroundColor: "rgb(156 ,177, 255)",
+        }}
+        className="font-semibold bg-clip-text text-transparent"
+      >
+        Sunrise
+      </h3>
+      <span
+        style={{
+          textShadow: "1px 1px 2px #FFFFFFB2",
+          backgroundColor: "rgb(156 ,177, 255)",
+        }}
+        className="text-lg bg-clip-text text-transparent"
+      >
+        {sunrise}
+      </span>
     </div>
   );
 };

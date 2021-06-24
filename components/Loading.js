@@ -6,10 +6,26 @@ const Loading = ({ status, isGpsOn }) => {
   }
   if (status === 0) {
     return (
-      <div className="text-secondary text-center transform translate-y-32">
-        <Image src="/rain.svg" height="144" width="158" />
-        <h1 className="text-7xl font-semibold text-center">404</h1>
-        <h2 className="mt-3 text-2xl font-semibold text-center">Not Found</h2>
+      <div className="font-oxanium text-primary text-center transform translate-y-32">
+        <Image src="/rain.svg" height="120" width="140" />
+        <h1
+          style={{
+            textShadow: "2px 2px 3px #ffffff80",
+            backgroundColor: "#b1c1fd",
+          }}
+          className="text-7xl font-semibold text-transparent text-center bg-clip-text "
+        >
+          404
+        </h1>
+        <h2
+          style={{
+            textShadow: "2px 2px 2px #ffffff80",
+            backgroundColor: "#b1c1fd",
+          }}
+          className="mt-3 text-2xl font-semibold text-transparent text-center bg-clip-text"
+        >
+          Not Found
+        </h2>
       </div>
     );
   }

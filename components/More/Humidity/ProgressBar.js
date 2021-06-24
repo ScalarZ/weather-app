@@ -13,18 +13,18 @@ const ProgressBar = ({ percentage }) => {
         }
       `}</style>
       <svg
-        width="200"
-        height="200"
+        width="210"
+        height="210"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle
-          cx="100"
-          cy="100"
+          filter="url(#filter0_di)"
+          cx="105"
+          cy="105"
           r="90"
-          fill="#0f1c49"
-          stroke="#080e25"
-          strokeWidth="20"
+          stroke="#D6DFFF"
+          strokeWidth="24"
           strokeDasharray="564"
           strokeDashoffset="170"
           strokeLinecap="round"
@@ -34,14 +34,61 @@ const ProgressBar = ({ percentage }) => {
             transform: "rotate(145deg)",
           }}
         />
+        <filter
+          id="filter0_di"
+          x="0"
+          y="0"
+          width="210"
+          height="210"
+          filterUnits="userSpaceOnUse"
+          colorInterpolationFilters="sRGB"   
+        >
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          />
+          <feOffset />
+          <feGaussianBlur stdDeviation="4" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0.733333 0 0 0 0 0.792157 0 0 0 0 1 0 0 0 1 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_dropShadow"
+            result="shape"
+          />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          />
+          <feOffset />
+          <feGaussianBlur stdDeviation="4" />
+          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0.733333 0 0 0 0 0.792157 0 0 0 0 1 0 0 0 1 0"
+          />
+          <feBlend mode="normal" in2="shape" result="effect2_innerShadow" />
+        </filter>
         <circle
           id="percentage"
-          cx="100"
-          cy="100"
+          cx="105"
+          cy="105"
           r="90"
           fill="none"
           stroke="url(#paint0_linear)"
-          strokeWidth="20"
+          strokeWidth="24"
           strokeDasharray="564"
           strokeDashoffset="564"
           strokeLinecap="round"
@@ -60,9 +107,8 @@ const ProgressBar = ({ percentage }) => {
             y2="151"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#00E0FF" />
-            <stop offset="0.505259" stopColor="#0075FF" />
-            <stop offset="0.999006" stopColor="#0047FF" />
+            <stop stopColor="#6C8DFF" />
+            <stop offset="1" stopColor="#6C7CB4" />
           </linearGradient>
         </defs>
       </svg>

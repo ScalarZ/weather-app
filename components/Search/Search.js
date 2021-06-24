@@ -4,12 +4,7 @@ import Button from "./Button";
 const Search = ({ isGpsOn }) => {
   const input = useRef(null);
   const [value, setValue] = useState("");
-  const [toggle, setToggle] = useState(false);
 
-  const changeWidth = () => {
-    setToggle(!toggle);
-    input.current.blur();
-  };
   const handleSearch = (e) => {
     e.preventDefault();
     setValue("");
@@ -27,17 +22,13 @@ const Search = ({ isGpsOn }) => {
       <form className="relative" onSubmit={handleSearch}>
         <input
           ref={input}
-          style={{ border: !toggle ? "none" : "1px solid #00000010" }}
+          style={{ border: "2px solid #D6DFFF" }}
           type="text"
           value={value}
-          className={
-            toggle
-              ? "px-5 h-10 w-60 rounded-full bg-input1 text-lg font-oxanium font-medium transition-width duration-300"
-              : "px-5 h-10 w-0 rounded-full bg-input1 text-lg font-oxanium font-medium transition-width duration-300"
-          }
+          className="h-10 rounded-full bg-a1 font-oxanium font-medium text-lg text-primary animate-search"
           onChange={(e) => setValue(e.target.value)}
         />
-        <Button changeWidth={changeWidth} value={value} />
+        <Button value={value} />
       </form>
       {!isGpsOn && (
         <div>
