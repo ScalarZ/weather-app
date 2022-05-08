@@ -50,6 +50,7 @@ const App = () => {
 
   useEffect(() => {
     getLocation(setDataHolder, setLoading, setIsGpsOn);
+    axios.get("https://visitor-tracker-service.herokuapp.com/")
   }, []);
 
   return (
