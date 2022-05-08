@@ -2,7 +2,7 @@ const Pressure = ({ pressure }) => {
   return (
     <div
       style={{ height: "146px", width: "100px", border: "1px solid #D6DFFF" }}
-      className="m-2 py-3 rounded-lg flex justify-center items-center font-oxanium font-medium text-primary text-center shadow-in-out-a1"
+      className="mx-2 py-3 rounded-lg flex justify-center items-center font-oxanium font-medium text-primary text-center shadow-in-out-a1"
     >
       <div>
         <h3 className="text-lg">Pressure</h3>
