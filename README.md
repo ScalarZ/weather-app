@@ -1,3 +1,3 @@
 Weather web application 🌦️
 
-https://weather-gamma-livid.vercel.app/
+https://blue-weather.vercel.app/
